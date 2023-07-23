@@ -9,7 +9,7 @@ export default function AuthGuard({children}: AuthGuardProps) {
     // const isAuthenticated = sessionStorage.getItem('access_token')
     const isAuthenticated = true
     if(!isAuthenticated) {
-      return <Navigate to='/'/>
+      return <Navigate to='/login'/>
     }else{
       return (
         <>{children}</>

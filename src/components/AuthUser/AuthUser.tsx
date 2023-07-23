@@ -10,7 +10,7 @@ export const AuthUser = async (data: {email:string,password:string}) => {
     formdata.append('password', data.password)
 
     try {
-        const result = await ApiManager( 'admin/login',
+        const result = await ApiManager( 'auth/login',
         {
           method: 'POST',
           headers:{

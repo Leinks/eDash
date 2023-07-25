@@ -5,7 +5,7 @@ export const AuthUser = async (data: {email:string,password:string}) => {
 
     const formdata = new FormData();
     const BodyContent = formdata
-  
+    // console.log(data)
     formdata.append('username', data.email)
     formdata.append('password', data.password)
 
@@ -18,11 +18,12 @@ export const AuthUser = async (data: {email:string,password:string}) => {
           Accept: '*',  
                      
         },
-            data: BodyContent,
+          data: BodyContent
+
         });
         if(result.status === 200){
 
-          sessionStorage.setItem('access_token',result.data.access_token)
+          sessionStorage.setItem('accessToken',result.data.accessToken)
           sessionStorage.setItem('name' , result.data.name)
           sessionStorage.setItem('email', result.data.email)
 
@@ -32,7 +33,7 @@ export const AuthUser = async (data: {email:string,password:string}) => {
 
           // console.log(result.data.access_token)
           // console.log(result.status)
-          // console.log(result.data)
+          console.log(result)
         
           return 0;
         }

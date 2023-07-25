@@ -20,7 +20,7 @@ export function Sidebar () {
   return (
     <>
       <div
-        className={`xl:h-[100vh] overflow-y-scroll fixed xl:static w-[60%] md:w-[30%] lg:w-[20%] xl:w-auto h-full top-0 bg-secondary-100 p-4 flex flex-col justify-between z-50 ${
+        className={` xl:h-[100vh] overflow-y-scroll fixed xl:static w-[60%] md:w-[30%] lg:w-[20%] xl:w-auto h-full top-0 bg-secondary-100 p-4 flex flex-col justify-between  ${
           showMenu ? "left-0" : "-left-full"
         } transition-all`}
       >
@@ -56,7 +56,7 @@ export function Sidebar () {
       </div>
       <button
         onClick={() => setShowMenu(!showMenu)}
-        className="xl:hidden fixed top-4 left-4 bg-primary text-black p-3 rounded-full z-50"
+        className="xl:hidden fixed top-4 left-4 bg-primary text-black p-3 rounded-full"
       >
         {showMenu ? <RiIcons.RiCloseLine /> : <RiIcons.RiMenu3Line />}
       </button>

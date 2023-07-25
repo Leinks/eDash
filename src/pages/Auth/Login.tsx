@@ -1,15 +1,7 @@
-import AuthLayout from "../../layouts/AuthLayout";
-import { DarkMode } from "../../components/DarkMode/DarkMode";
-
-export function Login() {
+import { CLogin } from "../../components/Login/Login";
 
 
-  return (
-    <AuthLayout>
-      <DarkMode/>
-      <div className="text-center">Login</div>  
-    </AuthLayout>
-  )
-}
+ export function Login() {
   
- 
+   return (<CLogin />);
+}

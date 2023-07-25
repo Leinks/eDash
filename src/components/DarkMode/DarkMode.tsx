@@ -7,19 +7,19 @@ export function DarkMode() {
   )
   const element = document.documentElement;
   const darkQuery = window.matchMedia("(prefers-color-scheme: dark)")
-  console.log(darkQuery)
+  // console.log(darkQuery)
   const options = [
     {
       title: 'dark',
-      icon: <MoonIcon className="w-5 h-5" />
+      icon: <MoonIcon className="w-4 h-4" />
     },
     {   
       title: 'light',
-      icon: <SunIcon className="w-5 h-5" />
+      icon: <SunIcon className="w-4 h-4" />
     },
     {    
       title: 'system',
-      icon: <DesktopIcon className="w-5 h-5" />
+      icon: <DesktopIcon className="w-4 h-4" />
     },
   ]
   function onWindowMatch(){
@@ -60,14 +60,14 @@ export function DarkMode() {
   })
 
     return (
-            <div className="fixed top-5 right-5 duration-100 dark:bg-slate-700 bg-gray-100 rounded">
+            <div className="fixed top-5 right-5 duration-800 dark:bg-black bg-gray-200 rounded">
 
             {
             options?.map(opt=>(
                 <button 
                 key={opt.title}
                 onClick={() => setTheme(opt.title)}
-                className={`w-8 h-8 leading-8 text-lg rounded-full m-1 px-1.5 ${theme === opt.title && 'text-sky-600'}`}>
+                className={`w-6 h-6 leading-8 text-lg rounded-full m-1 px-1  ${theme === opt.title && 'text-sky-700'}`}>
                 {opt.icon}
                 </button>
 
